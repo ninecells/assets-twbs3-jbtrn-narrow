@@ -15,5 +15,6 @@ class Twbs3JumboNarrowServiceProvider extends ServiceProvider
 
     public function register()
     {
+        App::register(Twbs3ServiceProvider::class);
     }
 }
