@@ -2,6 +2,7 @@
 
 namespace NineCells\Assets\Twbs3;
 
+use App;
 use Illuminate\Support\ServiceProvider;
 
 class Twbs3JumboNarrowServiceProvider extends ServiceProvider
