@@ -1,0 +1,13 @@
+{
+  "name": "ninecells/assets-twbs3-jbtrn-narrow",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.5.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "NineCells\\Assets\\Twbs3\\": ""
+    }
+  },
+  "minimum-stability": "dev"
+}
