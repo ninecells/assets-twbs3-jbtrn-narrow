@@ -9,6 +9,8 @@ class Twbs3JumboNarrowServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'ncells');
+
         $this->publishes([
             __DIR__ . '/resources/assets' => public_path('vendor/ninecells/assets-twbs3-jbtrn-narrow'),
         ], 'public');
