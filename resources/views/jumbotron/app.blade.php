@@ -18,6 +18,7 @@
 @section('site-name', '9Cells')
 
 @section('head')
+<link href="/vendor/ninecells/assets-twbs3-jbtrn-narrow/plugins/footer-margin.css" rel="stylesheet">
 @endsection
 
 @section('header')
