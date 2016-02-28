@@ -14,6 +14,11 @@ class Twbs3JumboNarrowServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/resources/assets' => public_path('vendor/ninecells/assets-twbs3-jbtrn-narrow'),
         ], 'public');
+
+        $this->publishes([
+            __DIR__ . '/resources/views/jumbotron/main.blade.php'
+            => resource_path('views/vendor/ncells/jumbotron/app.blade.php'),
+        ]);
     }
 
     public function register()
