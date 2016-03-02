@@ -5,7 +5,7 @@
 <meta name="description" content="{{ config('description', '9Cells') }}">
 <meta name="keywords" content="{{ config('keywords', '9Cells,9Cells,9Cells') }}">
 
-<meta property="og:site_name" content="ModernPUG">
+<meta property="og:site_name" content="9Cells">
 <meta property="og:image" content="{{ config('og:image') }}" />
 <meta property="og:title" content="{{ config('og:title', '9Cells') }}" />
 <meta property="og:description" content="{{ config('og:description', '9Cells') }}" />
