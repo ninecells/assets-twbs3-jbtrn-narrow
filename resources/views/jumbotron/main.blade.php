@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    @yield('meta')
+    @section('meta')
+    <meta name="author" content="{{ config('author', '9Cells') }}">
+    <meta name="description" content="{{ config('description', '9Cells') }}">
+    <meta name="keywords" content="{{ config('keywords', '9Cells,9Cells,9Cells') }}">
+
+    <meta property="og:site_name" content="9Cells">
+    <meta property="og:image" content="{{ config('og:image') }}"/>
+    <meta property="og:title" content="{{ config('og:title', '9Cells') }}"/>
+    <meta property="og:description" content="{{ config('og:description', '9Cells') }}"/>
+    @endsection
     <link rel="icon" href="/favicon.ico">
 
-    <title>@yield('title')</title>
+    <title>
+        @section('title')
+        {{ config('title', '9Cells') }}
+        @endsection
+    </title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/ninecells/assets-twbs3/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,12 +33,14 @@
     <!-- Custom styles for this template -->
     <link href="/vendor/ninecells/assets-twbs3-jbtrn-narrow/css/jumbotron-narrow.css" rel="stylesheet">
 
-    @yield('head')
+    @section('head')
+    <link href="/vendor/ninecells/assets-twbs3-jbtrn-narrow/plugins/footer-margin.css" rel="stylesheet">
+    @endsection
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -33,17 +48,30 @@
 
 <div class="container">
 
-    @yield('header')
+    @section('header')
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active">
+                    <a href="#">Menu1</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">Menu2</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-muted"><a href="/">9Cells</a></h3>
+    </div>
+    @endsection
 
     @yield('content')
 
     <footer class="footer">
-        <p>&copy; 2016 @yield('site-name').</p>
+        <p>&copy; 2016 @section('site-name', '9Cells').</p>
     </footer>
 
-</div> <!-- /container -->
-
-
+</div>
+@section('script')
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <script>
     $.ajaxSetup({
@@ -54,6 +82,6 @@
 </script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="/vendor/ninecells/assets-twbs3-jbtrn-narrow/js/ie10-viewport-bug-workaround.js"></script>
-@yield('script')
+@endsection
 </body>
 </html>
