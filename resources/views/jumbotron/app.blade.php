@@ -15,13 +15,13 @@
     <meta property="og:image" content="{{ config('og:image') }}"/>
     <meta property="og:title" content="{{ config('og:title', '9Cells') }}"/>
     <meta property="og:description" content="{{ config('og:description', '9Cells') }}"/>
-    @endsection
+    @show
     <link rel="icon" href="/favicon.ico">
 
     <title>
         @section('title')
         {{ config('title', '9Cells') }}
-        @endsection
+        @show
     </title>
 
     <!-- Bootstrap core CSS -->
@@ -35,7 +35,7 @@
 
     @section('head')
     <link href="/vendor/ninecells/assets-twbs3-jbtrn-narrow/plugins/footer-margin.css" rel="stylesheet">
-    @endsection
+    @show
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -62,12 +62,12 @@
         </nav>
         <h3 class="text-muted"><a href="/">9Cells</a></h3>
     </div>
-    @endsection
+    @show
 
     @yield('content')
 
     <footer class="footer">
-        <p>&copy; 2016 @section('site-name', '9Cells').</p>
+        <p>&copy; 2016 9Cells.</p>
     </footer>
 
 </div>
@@ -82,6 +82,6 @@
 </script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="/vendor/ninecells/assets-twbs3-jbtrn-narrow/js/ie10-viewport-bug-workaround.js"></script>
-@endsection
+@show
 </body>
 </html>
