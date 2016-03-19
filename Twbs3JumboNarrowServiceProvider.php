@@ -16,8 +16,8 @@ class Twbs3JumboNarrowServiceProvider extends ServiceProvider
         ], 'public');
 
         $this->publishes([
-            __DIR__ . '/resources/views/jumbotron/app.blade.php'
-            => resource_path('views/vendor/ncells/jumbotron/app.blade.php'),
+            __DIR__ . '/resources/views/app.blade.php'
+            => resource_path('views/vendor/ncells/app.blade.php'),
         ]);
     }
 
